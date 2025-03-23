@@ -33,8 +33,7 @@ main :: proc() {
 
     for !WindowShouldClose() {
 
-	// Full screen toggle  TODO: Change the key from KP_0 to a universal key used on multiple platforms F11?
-	if IsKeyPressed(.KP_0) {
+	if IsKeyPressed(.F11) {
 
 	    if IsWindowFullscreen() {
 		SetWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT)	
