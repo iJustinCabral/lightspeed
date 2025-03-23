@@ -6,9 +6,15 @@ import "core:fmt"
 WINDOW_WIDTH  :: 480 * 2 
 WINDOW_HEIGHT :: 360 * 2
 
-
-
 Game_State :: struct {
+
+}
+
+Game_Memory :: struct {
+
+}
+
+Player :: struct {
 
 }
 
