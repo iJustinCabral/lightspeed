@@ -3,8 +3,10 @@ package game
 import rl "vendor:raylib"
 import "core:fmt"
 
-WINDOW_WIDTH  :: 480 * 2 
-WINDOW_HEIGHT :: 360 * 2
+WINDOW_WIDTH    :: 480 * 2 
+WINDOW_HEIGHT   :: 360 * 2
+WINDOW_CENTER_X :: WINDOW_WIDTH / 2
+WINDOW_CENTER_Y :: WINDOW_HEIGHT / 2
 
 Game_State :: struct {
 
@@ -41,6 +43,7 @@ main :: proc() {
 	    else {
 		SetWindowSize(GetMonitorWidth(display), GetMonitorHeight(display))
 	    }
+
 	    ToggleFullscreen()
 	}
 	
@@ -49,6 +52,10 @@ main :: proc() {
 	defer EndDrawing()
 
 	ClearBackground(rl.BLACK)
+	text := fmt.ctprint("Lightspeed ahead!")
+	text_size := MeasureText(text, 20)
+	DrawText(text, WINDOW_CENTER_X - text_size / 2, WINDOW_CENTER_Y, 20, rl.WHITE)
+	
 	
     }
 
